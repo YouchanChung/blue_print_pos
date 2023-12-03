@@ -40,6 +40,7 @@ class BluePrintPosPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
     }
 
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
+        Logger.log("\n ================ on Method Call ==============")
         val arguments = call.arguments as Map<*, *>
         val content = arguments["content"] as String
         val duration = null
