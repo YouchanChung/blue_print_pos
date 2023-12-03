@@ -1,5 +1,6 @@
 import 'package:blue_print_pos/receipt/collection_style.dart';
 import 'package:blue_print_pos/receipt/receipt_image.dart';
+import 'package:blue_print_pos/receipt/receipt_text_left_center_right.dart';
 
 import 'receipt_alignment.dart';
 import 'receipt_line.dart';
@@ -92,6 +93,40 @@ ${CollectionStyle.all}
       ),
     );
     _data += leftRightText.html;
+  }
+
+  void addLeftCenterRightText(
+      String leftText,
+      String centerText,
+      String rightText, {
+        ReceiptTextStyleType leftStyle = ReceiptTextStyleType.normal,
+        ReceiptTextStyleType centerStyle = ReceiptTextStyleType.normal,
+        ReceiptTextStyleType rightStyle = ReceiptTextStyleType.normal,
+        ReceiptTextSizeType leftSize = ReceiptTextSizeType.medium,
+        ReceiptTextSizeType centerSize = ReceiptTextSizeType.medium,
+        ReceiptTextSizeType rightSize = ReceiptTextSizeType.medium,
+      }) {
+    final ReceiptTextLeftCenterRight leftCenterRightText = ReceiptTextLeftCenterRight(
+      leftText,
+      centerText,
+      rightText,
+      leftTextStyle: ReceiptTextStyle(
+        type: leftStyle,
+        useSpan: true,
+        size: leftSize,
+      ),
+      centerTextStyle: ReceiptTextStyle(
+        type: centerStyle,
+        useSpan: true,
+        size: rightSize
+      ),
+      rightTextStyle: ReceiptTextStyle(
+        type: leftStyle,
+        useSpan: true,
+        size: rightSize,
+      ),
+    );
+    _data += leftCenterRightText.html;
   }
 
   /// Add new line as empty or dashed line.

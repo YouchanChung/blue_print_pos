@@ -42,7 +42,7 @@ class BluePrintPosPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
         val arguments = call.arguments as Map<*, *>
         val content = arguments["content"] as String
-        val duration = arguments["duration"] as Double?
+        val duration = null
 
         if (call.method == "contentToImage") {
             webView = WebView(this.context)

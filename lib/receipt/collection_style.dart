@@ -51,7 +51,6 @@ class CollectionStyle {
           .right {
               float: right;
           }
-          
           .left {
               float: left;
           }
@@ -83,6 +82,19 @@ class CollectionStyle {
           
           .text-small {
               font-size: 0.8em;
+          }
+          .percentage-35 {
+              width: 35%;
+              float: left;
+          }
+          .percentage-25 {
+              width: 25%;
+              float: left;
+          }
+          .percentage-40 {
+              width: 40%;
+              float: left;
+              text-align: right;
           }
       </style>
     ''';
