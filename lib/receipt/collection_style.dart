@@ -15,7 +15,8 @@ class CollectionStyle {
           body {
               background: #eee;
               width: 576px;
-              font-size: 1.8em
+              font-size: 1.8em;
+              color: black;
           }
           
           .receipt {
